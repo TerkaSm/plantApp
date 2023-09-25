@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.garden {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.plant {
+    text-align: center;
+    margin: 10px;
+}
+
+.plant img {
+    max-width: 100px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 10px;
+    background-color: green;
+    margin-top: 5px;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+
+/* animace */
+
+/* Animace pro růst rostliny */
+@keyframes growAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Animace pro zalévání rostliny */
+@keyframes waterAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* Použití animace pro růst */
+.plant .progress-bar {
+    animation: growAnimation 1s ease-in-out;
+}
+
+/* Použití animace pro zalévání */
+.watering {
+    animation: waterAnimation 0.5s ease-in-out;
+}
