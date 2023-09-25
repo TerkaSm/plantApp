@@ -1,10 +1,11 @@
+const plants = document.querySelectorAll(".plant");
+
 document.addEventListener("DOMContentLoaded", function () {
     const growButton = document.getElementById("growButton");
     const waterButton = document.getElementById("waterButton");
-    const plants = document.querySelectorAll(".plant");
 
     const growthRate = 10; // Rychlost růstu rostliny (v procentech za kliknutí)
-
+    
     growButton.addEventListener("click", () => {
         plants.forEach((plant) => {
             const progressBar = plant.querySelector(".progress-bar");
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     waterButton.addEventListener("click", () => {
         plants.forEach((plant) => {
             // Přidat animaci pro zalévání zde (CSS keyframes)
+            plant.classList.add("watering");
         });
     });
 });
