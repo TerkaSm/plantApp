@@ -67,6 +67,11 @@ button {
     animation: growAnimation 1s ease-in-out;
 }
 
+
+.growing {
+    animation: growAnimation 1s ease-in-out;
+}
+
 /* Použití animace pro zalévání */
 .watering {
     animation: waterAnimation 0.5s ease-in-out;
